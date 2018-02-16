@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-
+import { FreeapiComponent } from './freeapi/freeapi.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FreeapiService } from './freeapi.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FreeapiComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FreeapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
